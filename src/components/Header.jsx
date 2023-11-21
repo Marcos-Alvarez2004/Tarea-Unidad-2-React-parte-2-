@@ -1,13 +1,16 @@
 import React from "react";
 import Logo from "../images/logo.png";
 import { BiSupport } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <div className="content-header">
         <div className="content-logo">
-          <img className="logo" src={Logo} alt="" />
+          <Link to="/">
+            <img className="logo" src={Logo} alt="" />
+          </Link>
         </div>
         <div className="content-support">
           <BiSupport />
@@ -18,16 +21,24 @@ function Header() {
       <nav className="menu">
         <ul className="list">
           <li className="items">
-            <p className="link">Home</p>
+            <Link to="/" className="link">
+              Home
+            </Link>
           </li>
           <li className="items">
-            <p className="link">Shop</p>
+            <Link to="/shop" className="link">
+              Shop
+            </Link>
           </li>
           <li className="items">
-            <p className="link">About Us</p>
+            <Link to="/aboutUs" className="link">
+              About Us
+            </Link>
           </li>
           <li className="items">
-            <p className="link">News</p>
+            <Link to="/news" className="link">
+              News
+            </Link>
           </li>
         </ul>
       </nav>
